@@ -1,0 +1,14 @@
+BEGIN:VEVENT
+UID:{{_id}}
+DTSTAMP:{{created}}{{! this should actually be a timestamp of when the iCal version is available. So, when the event hits this particular database (ex: on replication)}}
+CREATED:{{created}}
+LAST-MODIFIED:{{updated}}
+ORGANIZER;MAILTO:{{organizer}}
+{{#attendees}}
+ATTENDEE;MAILTO:{{.}}
+{{/attendees}}
+LOCATION:{{where}}
+DTSTART:{{start}}
+DTEND:{{end}}
+SUMMARY:{{title}}
+END:VEVENT
