@@ -5,7 +5,7 @@ function(head, req) {
 
 	var row;
 
-	provides('text/calendar',
+	provides('ics',
 		function() {
 			send('BEGIN:VCALENDAR');
 			send('VERSION:2.0');
